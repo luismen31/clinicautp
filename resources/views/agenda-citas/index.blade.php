@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title') :: Clínica Universitaria - UTP :: Agenda de Citas Médicas @stop
+@section('title') Agenda de Citas Médicas :: Clínica Universitaria - UTP :: @stop
 
 @section('new_css')
 	{!! Html::style('assets/css/calendar.css') !!}
@@ -20,8 +20,8 @@
 					<div class="btn-group">
 						<button class="btn btn-success" data-calendar-view="year">Año</button>
 						<button class="btn btn-success active" data-calendar-view="month">Mes</button>
-						<button class="btn btn-success" data-calendar-view="week">Semana</button>							
-						<button class="btn btn-success" data-calendar-view="day">Día</button>							
+						<button class="btn btn-success" data-calendar-view="week">Semana</button>
+						<button class="btn btn-success" data-calendar-view="day">Día</button>
 					</div>
 				</div>
 			</div>

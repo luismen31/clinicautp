@@ -8,16 +8,16 @@
     <link rel="shortcut icon" href="{{url('favicon.ico')}}" type="image/x-icon">
     <!-- Bootstrap core CSS -->
     {!! Html::style('assets/css/bootstrap.css') !!}
-    
+
     <!-- Custom styles for this template -->
     {!! Html::style('assets/css/clinica.css') !!}
     {!! Html::style('assets/css/font-awesome.min.css') !!}
     {!! Html::style('assets/css/bootstrap-datetimepicker.min.css') !!}
-    {!! Html::style('assets/css/bootstrap-table.css') !!}  
+    {!! Html::style('assets/css/bootstrap-table.css') !!}
 
     @yield('new_css')
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]> 
+    <!--[if lt IE 9]>
     {!! Html::script('assets/js/ie8-responsive-file-warning.min.js') !!}
      <!-- Fonts -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -66,11 +66,11 @@
 				<div class="row cuerpo">
 					<div class="col-sm-3">
 						<div class="list-group">
-						  <a href="{{ url('agenda') }}" class="list-group-item list-menu active">Agenda de Citas</a>
-						  <a href="#" class="list-group-item list-menu">Nuevo Paciente</a>
-						  <a href="#" class="list-group-item list-menu">Documentos Clínicos</a>
-						  <a href="#" class="list-group-item list-menu">Búsqueda</a>
-						  <a href="#" class="list-group-item list-menu">Estadística</a>
+						  <a href="{{ url('agenda') }}" class="list-group-item list-menu active"><i class="fa fa-calendar"></i> Agenda de Citas</a>
+						  <a href="{{ url('pacientes') }}" class="list-group-item list-menu"><i class="fa fa-user"></i> Nuevo Paciente</a>
+						  <a href="#" class="list-group-item list-menu"><i class="fa fa-file-text"></i> Documentos Clínicos</a>
+						  <a href="#" class="list-group-item list-menu"><i class="fa fa-search"></i> Búsqueda</a>
+						  <a href="#" class="list-group-item list-menu"><i class="fa fa-bar-chart"></i> Estadística</a>
 						</div>
 					</div>
 					<div class="col-sm-9">
@@ -95,10 +95,10 @@
     			</div>
     			<div class="col-sm-6 logogises">
     				{!! Html::image('img/giseslogo.png', 'Logo Gises') !!} Grupo de Investigación en Salud Electrónica y Supercomputación - UTP 2012-2013
-    			</div>    			    			
+    			</div>
     		</div>
     	</div>
-    </div> 
+    </div>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -109,10 +109,17 @@
     {!! Html::script('assets/js/bootstrap-datetimepicker.min.js') !!}
     {!! Html::script('assets/js/bootstrap-table.min.js') !!}
     {!! Html::script('assets/js/locale/bootstrap-table-es-MX.min.js') !!}
+	{!! Html::script('assets/js/script.js') !!}
     <script type="text/javascript">
     	var baseurl = '{!! url() !!}';
     </script>
-
+	<script type="text/javascript">
+	    $(function () {
+	        $('.datetimepicker').datetimepicker({
+	        	format: 'YYYY/MM/DD'
+	        });
+	    });
+    </script>
     @yield('new_scripts')
 </body>
 </html>

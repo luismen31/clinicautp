@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('app');
 });
 Route::resource('agenda', 'AgendaCitasController');
+Route::resource('pacientes', 'PacientesController');
+Route::controller('buscar', 'SearchController');
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
