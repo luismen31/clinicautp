@@ -23,6 +23,10 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+    /* VARIABLES MODIFICADAS A LA TABLA USUARIOS CLINICAUTP
+     * archivo original Illuminate\Foundation\Auth\AuthenticatesUser 
+     * TAMBIEN SE CAMBIO EL PASSWORD DENTRO DE: Illuminate\Auth\EloquentUserProvider
+     */
     protected $username = 'NO_IDENTIFICACION';
     protected $redirectTo = '/';
     protected $redirectAfterLogout = 'auth/login';
