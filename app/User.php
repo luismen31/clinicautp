@@ -21,19 +21,35 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'usuarios';
+    protected $primaryKey = 'ID_USUARIO';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['NO_IDENTIFICACION', 'CLAVE_ACCESO', 'ID_GRUPO_USUARIO'];
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = ['CLAVE_ACCESO', 'remember_token'];
+
+    public function getAuthIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * Get the password for the user.
+     *
+     * @return string
+     */
+    public function getAuthPassword()
+    {
+        return $this->CLAVE_ACCESO;
+    }
 }

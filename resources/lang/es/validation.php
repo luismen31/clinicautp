@@ -105,8 +105,8 @@ return [
     */
 
     'attributes' => [
-        'usuario' => 'Usuario',
-        'password' => 'Contraseña',
+        'NO_IDENTIFICACION' => 'Usuario',
+        'CLAVE_ACCESO' => 'Contraseña',
         'nombre_empresa' => 'Nombre de la Empresa',
         'logo_empresa' => 'Logo de la Empresa',
 

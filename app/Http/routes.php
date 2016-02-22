@@ -11,16 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return view('app');
+//Si esta autenticado vera estas rutas
+Route::group(['middleware' => 'auth'], function() {
+    
+	Route::get('auth/logout', 'Auth\AuthController@getLogout');
+	
+	Route::get('/', function () {
+	    return view('app');
+	});
+	
+	Route::resource('agenda', 'AgendaCitasController');
+	Route::resource('pacientes', 'PacientesController');
+	
+	Route::get('documentos', function(){
+		return view('documentos.index');
+	});
+	
+	Route::group(['prefix' => 'documentos'], function(){
+		Route::resource('receta-laboratorio', 'RecetasLaboratorioController');
+	});
+	Route::controller('buscar', 'SearchController');
 });
-Route::resource('agenda', 'AgendaCitasController');
-Route::resource('pacientes', 'PacientesController');
-Route::controller('buscar', 'SearchController');
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');

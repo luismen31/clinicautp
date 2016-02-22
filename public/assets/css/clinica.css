@@ -67,6 +67,7 @@ body{
 .navbar-default .navbar-menu:hover,
 .navbar-default .navbar-menu:focus{
     background-color: #018FC5;
+    transition: all 0.5s;
 }
 .navbar-default .navbar-menu:hover .icon-bar,
 .navbar-default .navbar-menu:focus .icon-bar{
@@ -104,14 +105,26 @@ body{
   background-color: #018FC5;
   border-color: #018FC5;
 }
+.list-group .list-menu i.fa{
+    font-size: 20px;
+    vertical-align: middle;
+}
+.list-group .list-menu span{
+    vertical-align: middle;
+}
 /* Contenido de la pagina */
 .contenido{
   height: 100%;
-  min-height: 400px;
+  min-height: 500px;
   background: #fff;
   box-shadow: 0px 0px 3.5px #E4E1E1;
   border: 1px solid #d4d5dc;
   padding: 10px;
+}
+.title{
+  border-bottom: 1.5px solid #A2BAC3;
+  margin: 5px 3px 10px 12px;
+  padding-bottom: 4px;
 }
 /* Paneles con pestañas */
 .panel.with-nav-tabs.panel-clinica{
@@ -128,7 +141,7 @@ body{
 .panel.with-nav-tabs .nav-justified{
 	margin-bottom: -1px;
 }
-/*** PANEL PRIMARY ***/
+/*** PANEL CLINICA ***/
 .with-nav-tabs.panel-clinica .nav-tabs > li > a,
 .with-nav-tabs.panel-clinica .nav-tabs > li > a:hover,
 .with-nav-tabs.panel-clinica .nav-tabs > li > a:focus {
@@ -215,22 +228,78 @@ body{
 /*Foto Personal*/
 .img-personal{
   width: 85%;
-  height: 85%;
   margin-bottom: 7px;
 }
 @media screen and (max-width: 991px){
     .img-personal{
         width: 30%;
-        height: 30%;
     }
 }
 @media screen and (max-width: 767px){
     .img-personal{
-        width: 45%;
-        height: 45%;
+        width: 20%;
     }
 }
 /*texto pequeño*/
 .small-font{
     font-size:70%;
 }
+
+.panel.panel-info .panel-body button.btn{
+    margin-bottom: 5px;
+}
+
+/* Menu circular */
+.menu-wheel{
+  p osition: relative;
+  l eft:45%;
+  to p:100px;
+  margin:15% 0 0 45%;
+  height: 100%;
+  min-height: 265px;
+}
+@media(max-width: 767px){
+  .menu-wheel{
+    margin-top: 25%;
+  }
+}
+
+@media(max-width: 480px){
+ .menu-wheel{
+    margin: 40% 0 0 40%;
+  } 
+}
+
+.wheel-button {
+  position: relative;
+}
+
+.wheel-button.btn{
+  border-radius: 100%;
+}
+
+.wheel-button i{
+  font-size: 24px;
+}
+
+.wheel {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 250px; /* this will determine the diameter of the circle  */
+  height: 250px; /* this will determine the diameter of the circle  */
+  visibility: hidden;
+  position: relative;
+  display: none;
+}
+
+.wheel li {
+  overflow: hidden;
+  float:left;
+}
+
+.wheel li a {
+  display: block;
+  border-radius: 100%
+}
+/* Fin del Menu circular */

@@ -66,11 +66,26 @@
 				<div class="row cuerpo">
 					<div class="col-sm-3">
 						<div class="list-group">
-						  <a href="{{ url('agenda') }}" class="list-group-item list-menu active"><i class="fa fa-calendar"></i> Agenda de Citas</a>
-						  <a href="{{ url('pacientes') }}" class="list-group-item list-menu"><i class="fa fa-user"></i> Nuevo Paciente</a>
-						  <a href="#" class="list-group-item list-menu"><i class="fa fa-file-text"></i> Documentos Clínicos</a>
-						  <a href="#" class="list-group-item list-menu"><i class="fa fa-search"></i> Búsqueda</a>
-						  <a href="#" class="list-group-item list-menu"><i class="fa fa-bar-chart"></i> Estadística</a>
+						  <a href="{{ url('agenda') }}" class="list-group-item list-menu active">
+							  <i class="fa fa-calendar"></i>
+							  <span>Agenda de Citas</span>
+						  </a>
+						  <a href="{{ url('pacientes') }}" class="list-group-item list-menu">
+							  <i class="fa fa-user"></i>
+							  <span>Nuevo Paciente</span>
+						  </a>
+						  <a href="{{ url('documentos') }}" class="list-group-item list-menu">
+							  <i class="fa fa-file-text"></i>
+							  <span> Documentos Clínicos</span>
+						  </a>
+						  <a href="#" class="list-group-item list-menu">
+							  <i class="fa fa-search"></i>
+							  <span>Búsqueda</span>
+						  </a>
+						  <a href="#" class="list-group-item list-menu">
+							  <i class="fa fa-bar-chart"></i>
+							  <span>Estadística</span>
+						  </a>
 						</div>
 					</div>
 					<div class="col-sm-9">

@@ -56,12 +56,12 @@
                             <div class="panel-body">
                                 {!! Form::open(['url' => 'auth/login', 'method' => 'POST', 'role' => 'form']) !!}
                                     <div class="form-group">
-                                        {!! Form::label('user', 'Usuario:', ['class' => 'control-label']) !!}
-                                        {!! Form::text('user', null, ['class' => 'form-control input-sm']) !!}
+                                        {!! Form::label('NO_IDENTIFICACION', 'Usuario:', ['class' => 'control-label']) !!}
+                                        {!! Form::text('NO_IDENTIFICACION', null, ['class' => 'form-control input-sm']) !!}
                                     </div>
                                     <div class="form-group">
-                                        {!! Form::label('password', 'Contraseña:', ['class' => 'control-label']) !!}
-                                        {!! Form::password('password', ['class' => 'form-control input-sm']) !!}
+                                        {!! Form::label('CLAVE_ACCESO', 'Contraseña:', ['class' => 'control-label']) !!}
+                                        {!! Form::password('CLAVE_ACCESO', ['class' => 'form-control input-sm']) !!}
                                     </div>
                                     <div class="text-center">                                    
                                         {!! Form::submit('Enviar', ['class' => 'btn btn-success btn-sm btn-block']) !!}

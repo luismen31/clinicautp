@@ -6,6 +6,8 @@
 
 @section('content')
 
+<h2 class="title"> Nuevo Paciente </h2>
+
 <div class="row">
     <div class="col-sm-12">
         {!! Form::open(['method' => 'POST', 'route' => 'pacientes.store', 'files' => true]) !!}
@@ -15,7 +17,7 @@
                     <center>
                         {!! Form::label('FOTO_PERSONAL', 'Foto Paciente', array('class' => 'control-label')) !!}
                         <div class="text-center">
-                            {!! Html::image('img/usersilhouette.png', 'Foto Paciente', ['id' => 'img-personal', 'class' => 'img-personal']) !!}
+                            {!! Html::image('img/user_image.png', 'Foto Paciente', ['id' => 'img-personal', 'class' => 'img-personal']) !!}
                         </div>
                         <span class="btn btn-primary btn-outline btn-file btn-sm">
                             <i class="fa fa-plus"></i> Agregar Foto {!! Form::file('FOTO_PERSONAL', array('id' => 'FOTO_PERSONAL', 'accept' => 'image/*')) !!}
